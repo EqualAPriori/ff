@@ -1,0 +1,29 @@
+;
+;  File created manually by Jacob Monroe
+;  03/07/2019
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.833333
+
+; Use force field parameters 
+#include "/home/jmonroe/Surface_Affinities_Project/FFfiles/ffnonbonded.itp"
+#include "/home/jmonroe/Surface_Affinities_Project/FFfiles/ffbonded.itp"
+; Note, if just studying aqueous, then ffbonded.itp is not necessary
+
+
+; Include all solutes of interest
+#include "/home/jmonroe/Surface_Affinities_Project/FFfiles/solutes.itp"
+
+; Use OPC4 water model 
+#include "/home/jmonroe/Surface_Affinities_Project/FFfiles/opc4.itp" 
+
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+methanol            1

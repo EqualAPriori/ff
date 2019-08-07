@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams isobutanol.frcmod
+mol = loadmol2 isobutanol.mol2
+saveoff mol isobutanol.lib
+check mol
+saveamberparm mol isobutanol.prmtop isobutanol.inpcrd
+saveamberparm mol isobutanol.parm7 isobutanol.rst7
+quit
+

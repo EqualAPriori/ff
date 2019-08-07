@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams propanol.frcmod
+mol = loadmol2 propanol.mol2
+saveoff mol propanol.lib
+check mol
+saveamberparm mol propanol.prmtop propanol.inpcrd
+saveamberparm mol propanol.parm7 propanol.rst7
+quit
+

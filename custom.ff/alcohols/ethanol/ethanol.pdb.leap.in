@@ -1,0 +1,9 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+loadamberparams ethanol.pdb.frcmod
+mol = loadmol2 ethanol.pdb.mol2
+saveoff mol ethanol.pdb.lib
+saveamberparm mol ethanol.pdb.prmtop ethanol.pdb.inpcrd
+quit
+

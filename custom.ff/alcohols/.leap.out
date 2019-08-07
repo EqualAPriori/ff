@@ -1,0 +1,9 @@
+-I: Adding /share/apps/amber/amber16/dat/leap/prep to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/lib to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/parm to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/cmd to search path.
+-f: Source .leap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: .leap.in

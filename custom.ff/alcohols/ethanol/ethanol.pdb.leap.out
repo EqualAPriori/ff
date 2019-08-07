@@ -1,0 +1,51 @@
+-I: Adding /share/apps/amber/amber16/dat/leap/prep to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/lib to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/parm to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/cmd to search path.
+-f: Source ethanol.pdb.leap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./ethanol.pdb.leap.in
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /share/apps/amber/amber16/dat/leap/lib/amino12.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/aminoct12.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/aminont12.lib
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.gaff
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /share/apps/amber/amber16/dat/leap/lib/atomic_ions.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/solvents.lib
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Could not open file ethanol.pdb.frcmod: not found
+Could not open file ethanol.pdb.mol2: not found
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+	Quit

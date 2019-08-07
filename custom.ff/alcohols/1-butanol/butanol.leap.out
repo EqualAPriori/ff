@@ -1,0 +1,26 @@
+-I: Adding /share/apps/amber/amber16/dat/leap/prep to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/lib to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/parm to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/cmd to search path.
+-f: Source butanol.leap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./butanol.leap.in
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.gaff2
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+Could not open file butanol.frcmod: not found
+Could not open file butanol.mol2: not found
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+	Quit

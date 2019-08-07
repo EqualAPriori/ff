@@ -1,0 +1,22 @@
+;
+;   File solute_lib.top  was generated
+;   By user: kshen (1003)
+;   On host: blob
+;   At date: Thu. July  4 00:52:34 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       make_solute_lib.py, VERSION 3.0.1
+;   Executable:   make_solute_lib.py
+;   Library dir:  /usr/local/gromacs/share/gromacs/top
+;   Command line:
+;     make_solute_lib.py
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             1            1           
+
+#include "solute_lib.itp"
+

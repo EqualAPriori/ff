@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams butanol.frcmod
+mol = loadmol2 butanol.mol2
+saveoff mol butanol.lib
+check mol
+saveamberparm mol butanol.prmtop butanol.inpcrd
+saveamberparm mol butanol.parm7 butanol.rst7
+quit
+

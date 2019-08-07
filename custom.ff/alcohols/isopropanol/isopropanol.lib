@@ -1,0 +1,105 @@
+!!index array str
+ "mol"
+!entry.mol.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "C" "c3" 0 1 131072 1 6 -0.111600
+ "H" "hc" 0 1 131072 2 1 0.043367
+ "H1" "hc" 0 1 131072 3 1 0.043367
+ "H2" "hc" 0 1 131072 4 1 0.043367
+ "C1" "c3" 0 1 131072 5 6 0.139100
+ "H3" "h1" 0 1 131072 6 1 0.028700
+ "C2" "c3" 0 1 131072 7 6 -0.111600
+ "H4" "hc" 0 1 131072 8 1 0.043367
+ "H5" "hc" 0 1 131072 9 1 0.043367
+ "H6" "hc" 0 1 131072 10 1 0.043367
+ "O" "oh" 0 1 131072 11 8 -0.601800
+ "H7" "ho" 0 1 131072 12 1 0.397000
+!entry.mol.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "C" "c3" 0 -1 0.0
+ "H" "hc" 0 -1 0.0
+ "H1" "hc" 0 -1 0.0
+ "H2" "hc" 0 -1 0.0
+ "C1" "c3" 0 -1 0.0
+ "H3" "h1" 0 -1 0.0
+ "C2" "c3" 0 -1 0.0
+ "H4" "hc" 0 -1 0.0
+ "H5" "hc" 0 -1 0.0
+ "H6" "hc" 0 -1 0.0
+ "O" "oh" 0 -1 0.0
+ "H7" "ho" 0 -1 0.0
+!entry.mol.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.mol.unit.childsequence single int
+ 2
+!entry.mol.unit.connect array int
+ 0
+ 0
+!entry.mol.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 1 3 1
+ 1 4 1
+ 1 5 1
+ 5 6 1
+ 5 7 1
+ 5 11 1
+ 7 8 1
+ 7 9 1
+ 7 10 1
+ 11 12 1
+!entry.mol.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+!entry.mol.unit.name single str
+ "iPO"
+!entry.mol.unit.positions table  dbl x  dbl y  dbl z
+ -11.533000 -3.316000 -1.094000
+ -12.244000 -4.149000 -1.107000
+ -10.533000 -3.759000 -1.016000
+ -11.607000 -2.780000 -2.045000
+ -11.814000 -2.395000 0.084000
+ -12.834000 -2.002000 0.017000
+ -10.827000 -1.240000 0.138000
+ -9.800000 -1.605000 0.254000
+ -10.881000 -0.627000 -0.766000
+ -11.032000 -0.603000 1.005000
+ -11.704000 -3.134000 1.296000
+ -12.353000 -3.856000 1.259000
+!entry.mol.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.mol.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "iPO" 1 13 1 "?" 0
+!entry.mol.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.mol.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.mol.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

@@ -1,0 +1,9 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadamberparams __name__.frcmod
+mol = load__filetype__ __name__.__filetype__
+saveoff mol __name__.lib
+saveamberparm mol __name__.prmtop __name__.inpcrd
+quit
+

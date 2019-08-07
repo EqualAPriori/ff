@@ -1,0 +1,9 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+source leaprc.water.tip3p
+loadamberparams $file.frcmod
+mol = load$outtype $file.$outtype
+saveoff mol $file.lib
+saveamberparm mol $file.prmtop $file.inpcrd
+quit
+

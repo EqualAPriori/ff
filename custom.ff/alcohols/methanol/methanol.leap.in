@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams methanol.frcmod
+mol = loadmol2 methanol.mol2
+saveoff mol methanol.lib
+check mol
+saveamberparm mol methanol.prmtop methanol.inpcrd
+saveamberparm mol methanol.parm7 methanol.rst7
+quit
+
