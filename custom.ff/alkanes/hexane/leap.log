@@ -1,0 +1,2766 @@
+log started: Mon Oct 14 23:25:19 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadac hexane.ac
+ERROR: syntax error
+
+> saveoff mol hexane.lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol hexane.parm7 hexane.rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Mon Oct 14 23:35:19 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+ Creating hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> quit
+	Quit
+log started: Wed Oct 16 00:30:30 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 00:32:34 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> quit
+	Quit
+log started: Wed Oct 16 00:35:36 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:35:42 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 00:37:33 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 00:39:09 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> source leaprc.lipid14
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.lipid14
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.lipid14 done
+>> logFile leap.log
+log started: Wed Oct 16 00:39:16 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+log started: Wed Oct 16 00:40:57 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+ Creating hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 00:45:06 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:45:43 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:46:30 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:47:11 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:48:40 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.1, April 2016)
+> 
+> loadamberparams .frcmod
+Could not open file .frcmod: No such file or directory
+> mol = loadmol2 .mol2
+Could not open file .mol2: No such file or directory
+> saveoff mol .lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol .prmtop .inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol .parm7 .rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:48:53 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 00:49:11 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Could not open file hexane.mol2: not found
+> saveoff mol hexane.lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol hexane.parm7 hexane.rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:49:13 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Could not open file hexane.mol2: not found
+> saveoff mol hexane.lib
+saveOff: Argument #1 is type String must be of type: [unit parameter_set list]
+usage:  saveOff <object> <filename>
+> check mol
+check: Argument #1 is type String must be of type: [unit molecule residue atom]
+usage:  check <unit> [parmset]
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> saveamberparm mol hexane.parm7 hexane.rst7
+saveAmberParm: Argument #1 is type String must be of type: [unit]
+usage:  saveAmberParm <unit> <topologyfile> <coordfile> 
+> quit
+	Quit
+log started: Wed Oct 16 00:50:07 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexane.mol2
+Loading Mol2 file: ./hexane.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - c3
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Could not find bond parameter for: c3 - hc
+Checking for angle parameters.
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - c3
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: c3 - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+Could not find angle parameter: hc - c3 - hc
+There are missing parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+For atom: .R<HEX 1>.A<C 1> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<C1 2> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H 3> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H1 4> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H2 5> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C2 6> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H3 7> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H4 8> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C3 9> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H5 10> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H6 11> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C4 12> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H7 13> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H8 14> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<C5 15> Could not find vdW (or other) parameters for type: c3
+For atom: .R<HEX 1>.A<H9 16> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H10 17> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H11 18> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H12 19> Could not find vdW (or other) parameters for type: hc
+For atom: .R<HEX 1>.A<H13 20> Could not find vdW (or other) parameters for type: hc
+Parameter file was not saved.
+> quit
+	Quit
+log started: Wed Oct 16 01:29:55 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexanelipid14.mol2
+Loading Mol2 file: ./hexanelipid14.mol2
+Reading MOLECULE named HEX
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	HEX	1
+  )
+ (no restraints)
+> quit
+	Quit
+log started: Wed Oct 16 10:37:57 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams hexane.frcmod
+Loading parameters: ./hexane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 hexanelipid14.mol2
+Loading Mol2 file: ./hexanelipid14.mol2
+Reading MOLECULE named C6
+> saveoff mol hexane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol hexane.prmtop hexane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C6	1
+  )
+ (no restraints)
+> saveamberparm mol hexane.parm7 hexane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C6	1
+  )
+ (no restraints)
+> quit
+	Quit

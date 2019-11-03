@@ -1,0 +1,95 @@
+;
+;   File ethane.top  was generated
+;   By user: kshen (535)
+;   On host: zin.cnsi.ucsb.edu
+;   At date: Wed. October  3 10:37:51 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       amber2gro.py, VERSION 2.7.4
+;   Executable:   amber2gro.py
+;   Library dir:  /usr/local/gromacs/share/gromacs/top
+;   Command line:
+;     /home/cask0/home/kshen/bin/simtools/amber2gro.py ethane -itp
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.833333
+
+#include "ethane.itp"
+
+
+[ moleculetype ]
+; Name            nrexcl
+C2          3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 C2 rtp C2 q 0.0
+    1         cD      1     C2      C      1  -0.094100    12.0100   ; qtot -0.0941
+    2         hL      1     C2      H      2   0.031700     1.0080   ; qtot -0.0624
+    3         hL      1     C2     H1      3   0.031700     1.0080   ; qtot -0.0307
+    4         hL      1     C2     H2      4   0.031700     1.0080   ; qtot 0.0010
+    5         cD      1     C2     C1      5  -0.094100    12.0100   ; qtot -0.0931
+    6         hL      1     C2     H3      6   0.031700     1.0080   ; qtot -0.0614
+    7         hL      1     C2     H4      7   0.031700     1.0080   ; qtot -0.0297
+    8         hL      1     C2     H5      8   0.031700     1.0080   ; qtot 0.0020
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+      1      5     1
+      1      4     1
+      1      3     1
+      1      2     1
+      5      6     1
+      5      7     1
+      5      8     1
+
+[ pairs ]
+;    ai     aj funct         c0         c1         c2         c3
+      2      6     1
+      2      7     1
+      2      8     1
+      3      6     1
+      3      7     1
+      3      8     1
+      4      6     1
+      4      7     1
+      4      8     1
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      1      5      6     1
+      1      5      7     1
+      1      5      8     1
+      2      1      4     1
+      2      1      5     1
+      2      1      3     1
+      3      1      4     1
+      3      1      5     1
+      4      1      5     1
+      6      5      7     1
+      6      5      8     1
+      7      5      8     1
+
+[ dihedrals ]
+;    ai     aj     ak     al funct         c0         c1         c2         c3         c4         c5
+      2      1      5      6     1
+      2      1      5      7     1
+      2      1      5      8     1
+      3      1      5      6     1
+      3      1      5      7     1
+      3      1      5      8     1
+      4      1      5      6     1
+      4      1      5      7     1
+      4      1      5      8     1
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+C2                   1

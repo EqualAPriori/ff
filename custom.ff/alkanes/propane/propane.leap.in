@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams propane.frcmod
+mol = loadmol2 propanelipid14.mol2
+saveoff mol propane.lib
+check mol
+saveamberparm mol propane.prmtop propane.inpcrd
+saveamberparm mol propane.parm7 propane.rst7
+quit
+

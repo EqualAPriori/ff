@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams heptane.frcmod
+mol = loadmol2 heptanelipid14.mol2
+saveoff mol heptane.lib
+check mol
+saveamberparm mol heptane.prmtop heptane.inpcrd
+saveamberparm mol heptane.parm7 heptane.rst7
+quit
+

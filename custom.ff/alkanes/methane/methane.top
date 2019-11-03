@@ -1,0 +1,59 @@
+;
+;   File methane.top  was generated
+;   By user: kshen (535)
+;   On host: zin.cnsi.ucsb.edu
+;   At date: Wed. October  3 10:37:50 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       amber2gro.py, VERSION 2.7.4
+;   Executable:   amber2gro.py
+;   Library dir:  /usr/local/gromacs/share/gromacs/top
+;   Command line:
+;     /home/cask0/home/kshen/bin/simtools/amber2gro.py methane -itp
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             1             1
+
+#include "methane.itp"
+
+
+[ moleculetype ]
+; Name            nrexcl
+C1          3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 C1 rtp C1 q -0.0
+    1         cD      1     C1      C      1  -0.108800    12.0100   ; qtot -0.1088
+    2         hL      1     C1      H      2   0.026700     1.0080   ; qtot -0.0821
+    3         hL      1     C1     H1      3   0.026700     1.0080   ; qtot -0.0554
+    4         hL      1     C1     H2      4   0.026700     1.0080   ; qtot -0.0287
+    5         hL      1     C1     H3      5   0.026700     1.0080   ; qtot -0.0020
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+      1      2     1
+      1      3     1
+      1      4     1
+      1      5     1
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      2      1      3     1
+      2      1      4     1
+      2      1      5     1
+      3      1      4     1
+      3      1      5     1
+      4      1      5     1
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+C1                   1

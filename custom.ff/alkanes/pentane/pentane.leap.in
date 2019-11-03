@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams pentane.frcmod
+mol = loadmol2 pentanelipid14.mol2
+saveoff mol pentane.lib
+check mol
+saveamberparm mol pentane.prmtop pentane.inpcrd
+saveamberparm mol pentane.parm7 pentane.rst7
+quit
+

@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams dodecane.frcmod
+mol = loadmol2 dodecanelipid14.mol2
+saveoff mol dodecane.lib
+check mol
+saveamberparm mol dodecane.prmtop dodecane.inpcrd
+saveamberparm mol dodecane.parm7 dodecane.rst7
+quit
+
