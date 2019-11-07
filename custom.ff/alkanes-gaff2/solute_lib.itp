@@ -1,0 +1,30 @@
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+c3             6  12.010000  0.00000000  A       0.339771       0.451035
+hc             1   1.008000  0.00000000  A       0.260018      0.0870272
+
+[ bondtypes ]
+; i    j  func       b0          kb
+c3    hc       1   0.10970   314569.856000
+c3    c3       1   0.15380   194572.736000
+
+[ pairtypes ]
+; i j   func    sigma1-4    epsilon1-4 ; ; THESE ARE 1-4 INTERACTIONS
+hc    hc     1  0.260018000 0.043513600
+c3    hc     1  0.299894500 0.099060983
+c3    c3     1  0.339771000 0.225517500
+
+[ angletypes ]
+;  i    j    k  func       th0       cth    rub         kub
+hc    c3    hc       1    107.5800000    326.0170000
+c3    c3    hc       1    109.8000000    391.7560000
+c3    c3    c3       1    111.5100000    542.9830000
+
+[ dihedraltypes ]
+;i  j   k  l  func      phase      kd      pn
+hc     c3     c3     hc      9   0.00   0.502080   3
+c3     c3     c3     hc      9   0.00   0.334720   3
+c3     c3     c3     c3      9   0.00   0.460240   1
+c3     c3     c3     c3      9   180.00   1.213360   2
+c3     c3     c3     c3      9   0.00   0.543920   3
+

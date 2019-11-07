@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams octane.frcmod
+mol = loadmol2 octane.mol2
+saveoff mol octane.lib
+check mol
+saveamberparm mol octane.prmtop octane.inpcrd
+saveamberparm mol octane.parm7 octane.rst7
+quit
+

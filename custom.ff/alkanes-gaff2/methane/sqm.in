@@ -1,0 +1,11 @@
+Run semi-empirical minimization
+ &qmmm
+    qm_theory='AM1', grms_tol=0.0005,
+ scfconv=1.d-10, ndiis_attempts=700,   qmcharge=0,
+ /
+   6     C       -5.6450        1.6160        0.0140 
+   1     H       -4.5750        1.6160        0.0140 
+   1    H1       -6.0020        2.4880       -0.4930 
+   1    H2       -6.0020        1.6190        1.0230 
+   1    H3       -6.0020        0.7410       -0.4880 
+

@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams hexane.frcmod
+mol = loadmol2 hexane.mol2
+saveoff mol hexane.lib
+check mol
+saveamberparm mol hexane.prmtop hexane.inpcrd
+saveamberparm mol hexane.parm7 hexane.rst7
+quit
+

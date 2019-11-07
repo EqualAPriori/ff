@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams pentadecane.frcmod
+mol = loadmol2 pentadecane.mol2
+saveoff mol pentadecane.lib
+check mol
+saveamberparm mol pentadecane.prmtop pentadecane.inpcrd
+saveamberparm mol pentadecane.parm7 pentadecane.rst7
+quit
+

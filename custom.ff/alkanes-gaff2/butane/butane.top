@@ -1,0 +1,157 @@
+;
+;   File butane.top  was generated
+;   By user: kshen (535)
+;   On host: zin.cnsi.ucsb.edu
+;   At date: Thu. October  4 18:32:38 2019
+;
+;   This is a standalone topology file
+;
+;   Created by:
+;   ParmEd:       amber2gro.py, VERSION 2.7.4
+;   Executable:   amber2gro.py
+;   Library dir:  /usr/local/gromacs/share/gromacs/top
+;   Command line:
+;     /home/cask0/home/kshen/bin/simtools/amber2gro.py butane -itp
+;
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.833333
+
+#include "butane.itp"
+
+
+[ moleculetype ]
+; Name            nrexcl
+C4          3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 C4 rtp C4 q 0.0
+    1         c3      1     C4      C      1  -0.092100    12.0100   ; qtot -0.0921
+    2         hc      1     C4      H      2   0.032367     1.0080   ; qtot -0.0597
+    3         hc      1     C4     H1      3   0.032367     1.0080   ; qtot -0.0274
+    4         hc      1     C4     H2      4   0.032367     1.0080   ; qtot 0.0050
+    5         c3      1     C4     C1      5  -0.080400    12.0100   ; qtot -0.0754
+    6         hc      1     C4     H3      6   0.038700     1.0080   ; qtot -0.0367
+    7         hc      1     C4     H4      7   0.038700     1.0080   ; qtot 0.0020
+    8         c3      1     C4     C2      8  -0.080400    12.0100   ; qtot -0.0784
+    9         hc      1     C4     H5      9   0.038700     1.0080   ; qtot -0.0397
+   10         hc      1     C4     H6     10   0.038700     1.0080   ; qtot -0.0010
+   11         c3      1     C4     C3     11  -0.092100    12.0100   ; qtot -0.0931
+   12         hc      1     C4     H7     12   0.032367     1.0080   ; qtot -0.0607
+   13         hc      1     C4     H8     13   0.032367     1.0080   ; qtot -0.0284
+   14         hc      1     C4     H9     14   0.032367     1.0080   ; qtot 0.0040
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+      1      5     1
+      5      8     1
+      8     11     1
+      1      4     1
+      1      3     1
+      1      2     1
+      5      6     1
+      5      7     1
+      8     10     1
+      8      9     1
+     11     12     1
+     11     14     1
+     11     13     1
+
+[ pairs ]
+;    ai     aj funct         c0         c1         c2         c3
+      1     11     1
+      1     10     1
+      1      9     1
+      2      6     1
+      2      8     1
+      2      7     1
+      3      6     1
+      3      8     1
+      3      7     1
+      4      6     1
+      4      8     1
+      4      7     1
+      5     12     1
+      5     14     1
+      5     13     1
+      6     10     1
+      6     11     1
+      6      9     1
+      7     10     1
+      7     11     1
+      7      9     1
+      9     12     1
+      9     14     1
+      9     13     1
+     10     12     1
+     10     14     1
+     10     13     1
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      1      5      8     1
+      5      8     11     1
+      1      5      6     1
+      1      5      7     1
+      2      1      4     1
+      2      1      5     1
+      2      1      3     1
+      3      1      4     1
+      3      1      5     1
+      4      1      5     1
+      5      8     10     1
+      5      8      9     1
+      6      5      8     1
+      6      5      7     1
+      7      5      8     1
+      8     11     12     1
+      8     11     14     1
+      8     11     13     1
+      9      8     10     1
+      9      8     11     1
+     10      8     11     1
+     12     11     14     1
+     12     11     13     1
+     13     11     14     1
+
+[ dihedrals ]
+;    ai     aj     ak     al funct         c0         c1         c2         c3         c4         c5
+      1      5      8     11     1  0.00000  0.46024  1
+      1      5      8     11     1  180.00008  1.21336  2
+      1      5      8     11     1  0.00000  0.54392  3
+      1      5      8     10     1
+      1      5      8      9     1
+      2      1      5      6     1
+      2      1      5      8     1
+      2      1      5      7     1
+      3      1      5      6     1
+      3      1      5      8     1
+      3      1      5      7     1
+      4      1      5      6     1
+      4      1      5      8     1
+      4      1      5      7     1
+      5      8     11     12     1
+      5      8     11     14     1
+      5      8     11     13     1
+      6      5      8     10     1
+      6      5      8     11     1
+      6      5      8      9     1
+      7      5      8     10     1
+      7      5      8     11     1
+      7      5      8      9     1
+      9      8     11     12     1
+      9      8     11     14     1
+      9      8     11     13     1
+     10      8     11     12     1
+     10      8     11     14     1
+     10      8     11     13     1
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+C4                   1

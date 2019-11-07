@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams decane.frcmod
+mol = loadmol2 decane.mol2
+saveoff mol decane.lib
+check mol
+saveamberparm mol decane.prmtop decane.inpcrd
+saveamberparm mol decane.parm7 decane.rst7
+quit
+

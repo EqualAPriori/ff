@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams dodecane.frcmod
+mol = loadmol2 dodecane.mol2
+saveoff mol dodecane.lib
+check mol
+saveamberparm mol dodecane.prmtop dodecane.inpcrd
+saveamberparm mol dodecane.parm7 dodecane.rst7
+quit
+
