@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams methane.frcmod
+mol = loadmol2 methanelipid14.mol2
+saveoff mol methane.lib
+check mol
+saveamberparm mol methane.prmtop methane.inpcrd
+saveamberparm mol methane.parm7 methane.rst7
+quit
+

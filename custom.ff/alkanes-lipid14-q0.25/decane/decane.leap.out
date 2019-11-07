@@ -1,0 +1,70 @@
+-I: Adding /share/apps/amber/amber16/dat/leap/prep to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/lib to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/parm to search path.
+-I: Adding /share/apps/amber/amber16/dat/leap/cmd to search path.
+-f: Source decane.leap.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./decane.leap.in
+----- Source: /share/apps/amber/amber16/dat/leap/cmd/leaprc.lipid14
+----- Source of /share/apps/amber/amber16/dat/leap/cmd/leaprc.lipid14 done
+Log file: ./leap.log
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading parameters: ./decane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading Mol2 file: ./decanelipid14.mol2
+Reading MOLECULE named C10
+Building topology.
+Building atom parameters.
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C10	1
+  )
+ (no restraints)
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C10	1
+  )
+ (no restraints)
+	Quit

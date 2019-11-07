@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams octane.frcmod
+mol = loadmol2 octanelipid14.mol2
+saveoff mol octane.lib
+check mol
+saveamberparm mol octane.prmtop octane.inpcrd
+saveamberparm mol octane.parm7 octane.rst7
+quit
+

@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams hexane.frcmod
+mol = loadmol2 hexanelipid14.mol2
+saveoff mol hexane.lib
+check mol
+saveamberparm mol hexane.prmtop hexane.inpcrd
+saveamberparm mol hexane.parm7 hexane.rst7
+quit
+

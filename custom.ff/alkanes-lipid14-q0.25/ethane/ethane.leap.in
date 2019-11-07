@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams ethane.frcmod
+mol = loadmol2 ethanelipid14.mol2
+saveoff mol ethane.lib
+check mol
+saveamberparm mol ethane.prmtop ethane.inpcrd
+saveamberparm mol ethane.parm7 ethane.rst7
+quit
+

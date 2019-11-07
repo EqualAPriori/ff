@@ -1,0 +1,9 @@
+source leaprc.gaff2
+loadamberparams .frcmod
+mol = loadmol2 .mol2
+saveoff mol .lib
+check mol
+saveamberparm mol .prmtop .inpcrd
+saveamberparm mol .parm7 .rst7
+quit
+

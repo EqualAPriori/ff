@@ -1,0 +1,9 @@
+source leaprc.lipid14
+loadamberparams tridecane.frcmod
+mol = loadmol2 tridecanelipid14.mol2
+saveoff mol tridecane.lib
+check mol
+saveamberparm mol tridecane.prmtop tridecane.inpcrd
+saveamberparm mol tridecane.parm7 tridecane.rst7
+quit
+

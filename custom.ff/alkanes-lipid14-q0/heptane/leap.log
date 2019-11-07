@@ -1,0 +1,253 @@
+log started: Wed Oct 16 10:38:00 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams heptane.frcmod
+Loading parameters: ./heptane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 heptanelipid14.mol2
+Loading Mol2 file: ./heptanelipid14.mol2
+Reading MOLECULE named C7
+> saveoff mol heptane.lib
+ Creating heptane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol heptane.prmtop heptane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C7	1
+  )
+ (no restraints)
+> saveamberparm mol heptane.parm7 heptane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C7	1
+  )
+ (no restraints)
+> quit
+	Quit
+log started: Thu Oct 31 18:38:48 2019
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the Lipid14 force field
+>> #       of Skjevik, Madej, Dickson, Gould, Teigen, and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff12SB
+>> #         source leaprc.lipid14
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "cA"  "C" "sp3" }
+>> 	{ "cB"  "C" "sp2" }
+>> 	{ "cC"  "C" "sp2" }
+>> 	{ "cR"  "C" "sp3" }
+>> 	{ "cP"  "C" "sp3" }
+>> 	{ "oC"  "O" "sp2" }
+>> 	{ "oS"  "O" "sp3" }
+>> 	{ "oH"  "O" "sp3" }
+>> 	{ "oR"  "O" "sp3" }
+>>         { "oT"  "O" "sp3" }
+>>         { "oP"  "O" "sp2" }
+>>         { "oO"  "O" "sp2" }
+>> 	{ "nA"  "N" "sp3" }
+>> 	{ "pA"  "P" "sp3" }
+>> 	{ "hA"  "H" "sp3" }
+>> 	{ "hE"  "H" "sp3" }
+>> 	{ "hX"  "H" "sp3" }
+>> 	{ "hB"  "H" "sp3" }
+>> 	{ "hN"  "H" "sp3" }
+>> 	{ "hO"  "H" "sp3" }
+>> 	{ "hR"  "H" "sp3" }
+>> 	{ "hS"  "H" "sp3" }
+>> 	{ "cD"  "C" "sp3" }
+>> 	{ "hL"  "H" "sp3" }
+>> }
+>> #
+>> #	Load the Lipid14 parameter set.
+>> #
+>> lipid14 = loadamberparams lipid14.dat
+Loading parameters: /share/apps/amber/amber16/dat/leap/parm/lipid14.dat
+Reading title:
+AMBER Lipid14 Force Field, C. Dickson, B. Madej, A.Skjevik, K. Teigen, I.R. Gould, R.C. Walker*
+>> 
+>> #       Load the Lipid14 master lib file.
+>> #       Note that other residues are stored in the lipid14_supp.lib file and will be released at a later date.
+>> loadoff lipid14.lib
+Loading library: /share/apps/amber/amber16/dat/leap/lib/lipid14.lib
+Loading: CHL
+Loading: LA
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+>> 
+> 
+> loadamberparams heptane.frcmod
+Loading parameters: ./heptane.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> mol = loadmol2 heptanelipid14.mol2
+Loading Mol2 file: ./heptanelipid14.mol2
+Reading MOLECULE named C7
+> saveoff mol heptane.lib
+Saving mol.
+Building topology.
+Building atom parameters.
+> check mol
+Checking 'mol'....
+Checking parameters for unit 'mol'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> saveamberparm mol heptane.prmtop heptane.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C7	1
+  )
+ (no restraints)
+> saveamberparm mol heptane.parm7 heptane.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	C7	1
+  )
+ (no restraints)
+> quit
+	Quit

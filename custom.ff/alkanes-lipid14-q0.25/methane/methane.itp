@@ -1,0 +1,13 @@
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+cD             6   12.01000    0.000000  A      0.339967       0.45773
+hL             1    1.00800    0.000000  A      0.260142       0.04184
+
+[ bondtypes ]
+; i    j  func       b0          kb
+cD    hL       1   0.10920   282252.640000
+
+[ angletypes ]
+;  i    j    k  func       th0       cth    rub         kub
+hL    cD    hL       1    108.350    329.950
+

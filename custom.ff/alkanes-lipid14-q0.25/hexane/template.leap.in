@@ -1,0 +1,9 @@
+source leaprc.__forcefield__
+loadamberparams __name__.frcmod
+mol = load__filetype__ __name__lipid14.__filetype__
+saveoff mol __name__.lib
+check mol
+saveamberparm mol __name__.prmtop __name__.inpcrd
+saveamberparm mol __name__.parm7 __name__.rst7
+quit
+
