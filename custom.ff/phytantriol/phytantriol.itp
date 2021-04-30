@@ -1,0 +1,105 @@
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+cD             6   12.01000    0.000000  A      0.339967       0.45773
+hL             1    1.00800    0.000000  A      0.260142       0.04184
+cA             6   12.01000    0.000000  A      0.339967       0.45773
+hE             1    1.00800    0.000000  A      0.247135     0.0656888
+oH             8   16.00000    0.000000  A      0.306647      0.880314
+hO             1    1.00800    0.000000  A             0             0
+
+[ bondtypes ]
+; i    j  func       b0          kb
+cD    cD       1   0.15350   253634.080000
+cD    cA       1   0.15350   253634.080000
+cA    cA       1   0.15350   253634.080000
+cA    oH       1   0.14260   262838.880000
+cD    hL       1   0.10920   282252.640000
+cA    hE       1   0.10930   281081.120000
+oH    hO       1   0.09740   309281.280000
+
+[ pairtypes ]
+; i j   func    sigma1-4    epsilon1-4 ; ; THESE ARE 1-4 INTERACTIONS
+cD    cD     1  0.33996700 0.22886500
+cD    cA     1  0.33996700 0.22886500
+cD    oH     1  0.32330700 0.31739019
+cA    oH     1  0.32330700 0.31739019
+oH    oH     1  0.30664700 0.44015700
+cD    hL     1  0.30005450 0.06919433
+hL    hL     1  0.26014200 0.02092000
+hL    cA     1  0.30005450 0.06919433
+cD    hE     1  0.29355100 0.08670025
+cD    hO     1  0.16998350 0.00000000
+hL    oH     1  0.28339450 0.09595876
+cA    hE     1  0.29355100 0.08670025
+cA    hO     1  0.16998350 0.00000000
+hE    oH     1  0.27689100 0.12023599
+hE    hE     1  0.24713500 0.03284440
+hE    hO     1  0.12356750 0.00000000
+
+[ angletypes ]
+;  i    j    k  func       th0       cth    rub         kub
+cD    cD    cD       1    110.630    528.941
+cD    cD    cA       1    110.630    528.941
+cD    cA    cD       1    110.630    528.941
+cD    cA    cA       1    110.630    528.941
+cD    cA    oH       1    109.430    566.681
+cA    cA    cA       1    110.630    528.941
+cA    cA    oH       1    109.430    566.681
+cD    cD    hL       1    110.050    388.024
+hL    cD    hL       1    108.350    329.950
+hL    cD    cA       1    110.050    388.024
+cA    cA    hE       1    110.070    387.940
+cA    oH    hO       1    108.160    394.049
+hE    cA    oH       1    109.880    426.517
+hE    cA    hE       1    109.550    327.858
+
+[ dihedraltypes ]
+;i  j   k  l  func      phase      kd      pn
+cD     cD     cD     cD      9   180.00   1.302060   1
+cD     cD     cD     cD      9   180.00   -0.515890   2
+cD     cD     cD     cD      9   0.00   0.480740   3
+cD     cD     cD     cD      9   0.00   -0.920060   4
+cD     cD     cD     cD      9   0.00   0.907930   5
+cD     cD     cD     cA      9   180.00   1.302060   1
+cD     cD     cD     cA      9   180.00   -0.515890   2
+cD     cD     cD     cA      9   0.00   0.480740   3
+cD     cD     cD     cA      9   0.00   -0.920060   4
+cD     cD     cD     cA      9   0.00   0.907930   5
+cD     cD     cA     cD      9   180.00   1.302060   1
+cD     cD     cA     cD      9   180.00   -0.515890   2
+cD     cD     cA     cD      9   0.00   0.480740   3
+cD     cD     cA     cD      9   0.00   -0.920060   4
+cD     cD     cA     cD      9   0.00   0.907930   5
+cD     cD     cA     cA      9   180.00   1.302060   1
+cD     cD     cA     cA      9   180.00   -0.515890   2
+cD     cD     cA     cA      9   0.00   0.480740   3
+cD     cD     cA     cA      9   0.00   -0.920060   4
+cD     cD     cA     cA      9   0.00   0.907930   5
+cD     cD     cA     oH      9   0.00   0.651030   3
+cD     cA     cA     cA      9   180.00   1.302060   1
+cD     cA     cA     cA      9   180.00   -0.515890   2
+cD     cA     cA     cA      9   0.00   0.480740   3
+cD     cA     cA     cA      9   0.00   -0.920060   4
+cD     cA     cA     cA      9   0.00   0.907930   5
+cD     cA     cA     oH      9   0.00   0.651030   3
+cA     cA     cA     oH      9   0.00   0.651030   3
+oH     cA     cA     oH      9   0.00   4.727920   2
+oH     cA     cA     oH      9   0.00   3.765600   3
+cD     cD     cD     hL      9   0.00   0.669440   3
+hL     cD     cD     hL      9   0.00   0.627600   3
+hL     cD     cD     cA      9   0.00   0.669440   3
+cD     cA     cD     hL      9   0.00   0.669440   3
+cD     cA     cA     hE      9   0.00   0.651030   3
+cD     cA     oH     hO      9   0.00   1.046000   1
+cD     cA     oH     hO      9   0.00   0.669440   3
+hL     cD     cA     cA      9   0.00   0.669440   3
+hL     cD     cA     oH      9   0.00   1.046000   1
+hL     cD     cA     oH      9   0.00   0.000000   3
+cA     cA     cA     hE      9   0.00   0.651030   3
+cA     cA     oH     hO      9   0.00   1.046000   1
+cA     cA     oH     hO      9   0.00   0.669440   3
+hE     cA     cA     oH      9   0.00   1.046000   1
+hE     cA     cA     oH      9   0.00   0.000000   3
+hE     cA     cA     hE      9   0.00   0.651030   3
+hE     cA     oH     hO      9   0.00   2.092000   3
+
